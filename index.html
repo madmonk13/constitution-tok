@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ConstitutionScroll</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+  <meta name="description" content="Swipe through bite-sized facts and the full text of the U.S. Constitution, TikTok-style." />
+  <meta name="theme-color" content="#0b0b0f" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="brand">
+    <span class="dot"></span>
+    <span class="title">ConstitutionScroll</span>
+  </div>
+
+  <div class="tabbar">
+    <button class="tab-btn active" data-mode="facts">Quick Facts</button>
+    <button class="tab-btn" data-mode="text">Full Text</button>
+  </div>
+
+  <div class="mode-panel active" data-mode="facts">
+    <div id="feed-facts" class="feed"></div>
+    <div class="progress-rail"><div class="progress-fill" id="progress-fill-facts"></div></div>
+    <div class="hint" id="hint-facts">
+      <div class="hint-pill">⬆︎ Swipe up for the next fact</div>
+    </div>
+  </div>
+
+  <div class="mode-panel" data-mode="text">
+    <div id="feed-text" class="feed"></div>
+    <div class="progress-rail"><div class="progress-fill" id="progress-fill-text"></div></div>
+    <div class="hint" id="hint-text">
+      <div class="hint-pill">⬆︎ Swipe up for the next Article · ⇆ swipe for more</div>
+    </div>
+  </div>
+
+  <script src="facts.js"></script>
+  <script src="entries.js"></script>
+  <script src="app.js"></script>
+  <script src="app-text.js"></script>
+  <script src="tabs.js"></script>
+</body>
+</html>
